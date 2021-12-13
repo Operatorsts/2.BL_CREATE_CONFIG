@@ -83,6 +83,12 @@ pipeline {
       }
     }
 
+    stage('sichere alte config') {
+      steps {
+        sh '/var/lib/jenkins/2BL/configfile/copy_save.sh'
+      }
+    }
+
   }
   environment {
     SPIELNUMMER1 = '180201'
